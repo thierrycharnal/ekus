@@ -1,0 +1,16 @@
+# Robots.txt pour EKU — Réseau d'échange B2B
+# Dernière mise à jour : 2026-05-27
+
+User-agent: *
+Allow: /
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /private/
+Disallow: /*?utm_
+Disallow: /*?ref=
+
+# Sitemap
+Sitemap: https://www.eku.fr/sitemap.xml
+
+# Crawl-delay optionnel pour éviter la surcharge serveur (phase pilote)
+Crawl-delay: 1

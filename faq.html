@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Questions & Réponses — EKU</title>
+
+  <meta
+    name="description"
+    content="Tout comprendre sur EKU : légalité, fonctionnement des crédits de compensation, gestion de la TVA et sécurité du réseau d'échange B2B."
+  />
+
+  <style>
+    :root{
+      --bg:#0b1020;
+      --card:#121a2f;
+      --card-light:#17213d;
+      --text:#f8fafc;
+      --muted:#94a3b8;
+      --primary:#3b82f6;
+      --primary-hover:#2563eb;
+      --border:#22304f;
+      --success:#22c55e;
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:Inter,system-ui,sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+
+    .container{
+      max-width:900px;
+      margin:auto;
+      padding:0 24px;
+    }
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:100;
+      backdrop-filter:blur(12px);
+      background:rgba(11,16,32,0.85);
+      border-bottom:1px solid rgba(255,255,255,0.05);
+    }
+
+    nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:18px 0;
+    }
+
+    .logo{
+      font-size:1.5rem;
+      font-weight:800;
+      letter-spacing:-0.04em;
+      color:white;
+      text-decoration:none;
+    }
+
+    .logo span{
+      color:var(--primary);
+    }
+
+    .btn-back{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      color:var(--muted);
+      text-decoration:none;
+      font-size:0.9rem;
+      font-weight:600;
+      transition:color 0.2s;
+    }
+
+    .btn-back:hover{
+      color:white;
+    }
+
+    .faq-hero{
+      padding:60px 0 40px;
+      text-align:center;
+    }
+
+    .faq-hero h1{
+      font-size:3rem;
+      letter-spacing:-0.05em;
+      margin-bottom:16px;
+    }
+
+    .gradient{
+      background:linear-gradient(to right,#60a5fa,#22d3ee);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    .faq-hero p{
+      color:var(--muted);
+      font-size:1.1rem;
+      max-width:600px;
+      margin:auto;
+    }
+
+    .category-title {
+      font-size:1.4rem;
+      color:var(--primary);
+      margin:45px 0 20px;
+      letter-spacing:-0.03em;
+      font-weight:700;
+      border-bottom:1px solid var(--border);
+      padding-bottom:8px;
+    }
+
+    .faq-suite {
+      display:flex;
+      flex-direction:column;
+      gap:16px;
+    }
+
+    .faq-item {
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:24px;
+      transition:border-color 0.2s;
+    }
+
+    .faq-item:hover {
+      border-color:rgba(59,130,246,0.3);
+    }
+
+    .faq-question {
+      font-size:1.15rem;
+      font-weight:700;
+      margin-bottom:12px;
+      letter-spacing:-0.02em;
+      color:white;
+    }
+
+    .faq-answer {
+      color:var(--muted);
+      font-size:0.98rem;
+    }
+
+    .faq-answer p {
+      margin-bottom:10px;
+    }
+
+    .faq-answer p:last-child {
+      margin-bottom:0;
+    }
+
+    .faq-answer ul {
+      padding-left:20px;
+      margin-top:8px;
+    }
+
+    .faq-answer li {
+      margin-bottom:6px;
+    }
+
+    .faq-cta {
+      margin:60px 0;
+      background:linear-gradient(180deg,#10182e,#121a2f);
+      border:1px solid var(--border);
+      border-radius:24px;
+      padding:34px;
+      text-align:center;
+    }
+
+    .faq-cta h3{
+      font-size:1.5rem;
+      margin-bottom:12px;
+      letter-spacing:-0.03em;
+    }
+
+    .btn-action {
+      display:inline-flex;
+      padding:12px 24px;
+      background:var(--primary);
+      color:white;
+      border-radius:10px;
+      font-weight:700;
+      text-decoration:none;
+      margin-top:14px;
+      transition:0.2s ease;
+    }
+
+    .btn-action:hover {
+      background:var(--primary-hover);
+      transform:translateY(-2px);
+    }
+
+    footer{
+      padding:40px 0;
+      border-top:1px solid rgba(255,255,255,0.06);
+      text-align:center;
+      color:var(--muted);
+      font-size:0.9rem;
+    }
+
+    @media(max-width:600px){
+      .faq-hero h1{
+        font-size:2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <a href="index.html" class="logo">EKU<span>.</span></a>
+      <a href="index.html" class="btn-back">← Retour au site</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="faq-hero">
+    <h1>Questions & <span class="gradient">Réponses</span></h1>
+    <p>Tout ce que vous devez savoir sur le fonctionnement, la légalité et la vision du réseau d’échange EKU.</p>
+  </section>
+
+  <h2 class="category-title">Légalité, Concept & Modèle</h2>
+  <div class="faq-suite">
+
+    <div class="faq-item">
+      <div class="faq-question">“C’est légal ?”</div>
+      <div class="faq-answer">
+        <p><strong>Oui.</strong></p>
+        <p>EKU repose sur un modèle de compensation inter-entreprises et non sur une monnaie ou une activité bancaire.</p>
+        <p>Chaque échange repose sur :</p>
+        <ul>
+          <li>Une prestation réelle</li>
+          <li>Une facturation classique en euros</li>
+          <li>Une gestion normale de la TVA</li>
+          <li>Une traçabilité comptable</li>
+        </ul>
+        <p style="margin-top:10px;">Le système est entièrement encadré par le droit commercial classique.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">“Est-ce une cryptomonnaie ?”</div>
+      <div class="faq-answer">
+        <p><strong>Non.</strong></p>
+        <p>EKU n’est ni une cryptomonnaie, ni un actif spéculatif, ni un produit financier.</p>
+        <p>Les crédits EKU servent uniquement d’unité interne de compensation pour fluidifier les échanges entre entreprises.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">“Pourquoi ne pas simplement payer en euros ?”</div>
+      <div class="faq-answer">
+        <p>Parce que de nombreuses entreprises disposent de ressources sous-utilisées : capacités de production, heures creuses, compétences internes, surstocks...</p>
+        <p>EKU permet de transformer cette capacité inutilisée en pouvoir d’achat réseau tout en préservant la trésorerie.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">“EKU est-il un établissement financier ?”</div>
+      <div class="faq-answer">
+        <p><strong>Non.</strong></p>
+        <p>EKU n’est ni une banque, ni un établissement de crédit. Il s’agit d’une infrastructure d’échange et de compensation entre entreprises.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">“Les crédits EKU peuvent-ils être convertis en euros ?”</div>
+      <div class="faq-answer">
+        <p><strong>Non.</strong></p>
+        <p>Les crédits EKU ne sont pas une monnaie librement convertible. Ils servent uniquement à circuler au sein du réseau.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <h2 class="category-title">Fonctionnement des échanges</h2>
+  <div class="faq-suite">
+
+    <div class="faq-item">
+      <div class="faq-question">“Comment fonctionne concrètement un échange ?”</div>
+      <div class="faq-answer">
+        <ol style="padding-left:20px;">
+          <li style="margin-bottom:6px;">Une entreprise propose une prestation ou un actif disponible.</li>
+          <li style="margin-bottom:6px;">Elle réalise une vente à une autre entreprise du réseau.</li>
+          <li style="margin-bottom:6px;">Elle reçoit des crédits EKU.</li>
+          <li style="margin-bottom:6px;">Elle peut utiliser ces crédits auprès d’autres entreprises du réseau.</li>
+        </ol>
+        <p style="margin-top:10px;">Le système est multilatéral : il n’est pas nécessaire d’échanger directement de manière bilatérale entre les mêmes entreprises.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">“Qui fixe les prix ?”</div>
+      <div class="faq-answer">
+        <p>Les entreprises restent totalement libres de fixer leurs prix.</p>
+        <p>Cependant, les prix doivent rester cohérents avec le marché afin d’éviter le dumping, la destruction de valeur ou les déséquilibres au sein du réseau.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">“Comment gérez-vous la TVA ?”</div>
+      <div class="faq-answer">
+        <p>Exactement comme une transaction classique : facturation en euros, collecte de TVA et déclaration standard.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">“Que se passe-t-il si je n’utilise pas mes crédits ?”</div>
+      <div class="faq-answer">
+        <p>Le système repose sur l’équilibre du réseau. L’objectif d’EKU est de créer suffisamment de densité économique pour garantir la circulation et l’utilisation fluide de vos crédits.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <h2 class="category-title">Sécurité, Contrôle & Abus</h2>
+  <div class="faq-suite">
+
+    <div class="faq-item">
+      <div class="faq-question">“Comment éviter les abus ?”</div>
+      <div class="faq-answer">
+        <p>EKU met en place des garde-fous stricts :</p>
+        <ul>
+          <li>Vérification systématique du SIRET</li>
+          <li>Validation manuelle des profils</li>
+          <li>Suivi rigoureux des transactions</li>
+          <li>Historique transparent et traçable</li>
+          <li>Contrôle algorithmique des comportements réseau</li>
+        </ul>
+        <p style="margin-top:10px;">Tout comportement frauduleux peut entraîner l'exclusion immédiate du réseau.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">“Et si une entreprise ne livre pas correctement sa prestation ?”</div>
+      <div class="faq-answer">
+        <p>Les règles commerciales classiques s’appliquent : émission de devis, signatures de contrats, facturation et responsabilité légale habituelle.</p>
+        <p>EKU n’intervient pas comme garant contractuel mais agit comme l'infrastructure technique d’échange.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">“Comment protégez-vous les données ?”</div>
+      <div class="faq-answer">
+        <p>Les données sont hébergées en Europe, en stricte conformité avec le RGPD. Elles sont sécurisées, contrôlées et les accès y sont fortement limités.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <h2 class="category-title">Entreprises & Échanges éligibles</h2>
+  <div class="faq-suite">
+
+    <div class="faq-item">
+      <div class="faq-question">“Quels types d’entreprises sont visés ?”</div>
+      <div class="faq-answer">
+        <p>Le réseau s'adresse principalement aux : PME, TPE, artisans, indépendants, prestataires de services B2B, agences et entreprises de services.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">“Quels types d’échanges sont acceptés ?”</div>
+      <div class="faq-answer">
+        <p><strong>Exemples :</strong> Services marketing, développement informatique, maintenance, consulting, logistique, impression, services administratifs, mise à disposition d'équipements ou écoulement de surstocks.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">“Quels types d’échanges sont refusés ?”</div>
+      <div class="faq-answer">
+        <p><strong>Exemples :</strong> Activités illégales, travail dissimulé, spéculation financière, sous-évaluation volontaire (dumping) et transactions sans réalité économique avérée.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <h2 class="category-title">Vision, Stratégie & Évolution</h2>
+  <div class="faq-suite">
+
+    <div class="faq-item">
+      <div class="faq-question">“Pourquoi lancer ce projet maintenant ?”</div>
+      <div class="faq-answer">
+        <p>Parce que les entreprises font face aujourd'hui à des tensions majeures de trésorerie, une hausse globale des coûts, des capacités sous-utilisées et un accès plus difficile au financement bancaire.</p>
+        <p>EKU optimise les ressources existantes plutôt que de pousser les structures à créer de la dette.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">“Le projet est-il déjà opérationnel ?”</div>
+      <div class="faq-answer">
+        <p><strong>Pas totalement.</strong></p>
+        <p>EKU est actuellement en phase de validation marché et de construction de son réseau pilote. L'objectif est de mesurer l’intérêt réel, valider le modèle comptable et créer la première densité économique.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">“Comment garantir qu’il y aura assez d’entreprises dans le réseau ?”</div>
+      <div class="faq-answer">
+        <p>Le développement est rigoureusement progressif : phase pilote localisée, recrutement ciblé, logique territoriale forte et sélection rigoureuse d’entreprises complémentaires. La priorité absolue est la <strong>densité d'échange</strong> avant la croissance globale.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">“Pourquoi rejoindre la phase pilote maintenant ?”</div>
+      <div class="faq-answer">
+        <p>Les premiers membres peuvent participer activement à la construction du réseau, influencer son fonctionnement, bénéficier d’un avantage concurrentiel de positionnement et accéder très tôt aux flux économiques générés.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">...Et comment gagnez-vous de l’argent ?</div>
+      <div class="faq-answer">
+        <p>Le modèle économique final d'EKU reposera sur des abonnements, des frais de transaction réseau légers, des services premium et la mise à disposition d'outils avancés de gestion et d’analyse.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">“Pourquoi EKU pourrait réussir là où d’autres ont échoué ?”</div>
+      <div class="faq-answer">
+        <p>Parce que le projet évite scrupuleusement les erreurs classiques : la croissance ultra-rapide déconnectée du terrain, l'absence de sélection des membres, les logiques spéculatives et le manque de liquidité réseau.</p>
+        <p>EKU privilégie la progressivité, la qualité du réseau, l'équilibre strict offre/demande et une crédibilité économique et comptable totale.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <section class="faq-cta">
+    <h3>Prêt à optimiser vos capacités ?</h3>
+    <p>Rejoignez la phase pilote et préservez votre trésorerie dès aujourd'hui.</p>
+    <a href="index.html#pilot" class="btn-action">Participer au réseau pilote</a>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <p>EKU © 2026 — Réseau pilote de compensation inter-entreprises</p>
+  </div>
+</footer>
+
+</body>
+</html>
