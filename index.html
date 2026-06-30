@@ -647,8 +647,10 @@ text-align:center;color:var(--muted);font-size:0.92rem;
     padding:6px 12px;
   }
   .nav-cta{
-    padding:8px 14px;
-    font-size:0.78rem;
+    padding:6px 12px !important;
+    font-size:0.7rem !important;
+    white-space:normal !important;
+    text-align:center !important;
   }
   .hero{
     padding:60px 0 40px;
@@ -661,6 +663,9 @@ text-align:center;color:var(--muted);font-size:0.92rem;
   }
   .hero-card{
     padding:24px;
+  }
+  .metric{
+    padding:16px 0 !important;
   }
   .metric strong{
     font-size:1.1rem;
@@ -715,8 +720,18 @@ text-align:center;color:var(--muted);font-size:0.92rem;
     align-items:center;
     text-align:center;
   }
+  .investor{
+    grid-template-columns:1fr;
+    max-width:400px;
+    margin:0 auto;
+    gap:16px;
+  }
   .investor-box{
     padding:20px;
+    margin-bottom:16px;
+  }
+  #investisseurs{
+    margin-top:10px;
   }
   .form-wrapper{
     padding:24px 16px;
@@ -727,7 +742,7 @@ text-align:center;color:var(--muted);font-size:0.92rem;
   .eku-form-container input,
   .eku-form-container textarea,
   .eku-form-container select{
-    font-size:16px !important; /* évite le zoom sur iOS */
+    font-size:16px !important;
   }
   .eku-form-container .conditional-field{
     display:block !important;
@@ -753,6 +768,10 @@ text-align:center;color:var(--muted);font-size:0.92rem;
   .trust-item{
     font-size:0.78rem;
     padding:6px 12px;
+  }
+  .trust-strip{
+    margin-top:30px;
+    gap:10px;
   }
   .case-concrete h3{
     font-size:1.2rem;
@@ -802,7 +821,8 @@ text-align:center;color:var(--muted);font-size:0.92rem;
     justify-content:center;
     align-items:center;
     width:100%;
-    padding:16px;
+    max-width:100%;
+    padding:12px !important;
     border-radius:16px;
     background:linear-gradient(135deg,#3b82f6,#22d3ee);
     color:white;
@@ -810,7 +830,9 @@ text-align:center;color:var(--muted);font-size:0.92rem;
     text-decoration:none;
     box-shadow:0 12px 35px rgba(0,0,0,0.35);
     animation:pulse 2.5s infinite;
-    font-size:1rem;
+    font-size:0.9rem !important;
+    box-sizing:border-box !important;
+    text-align:center !important;
   }
   @keyframes pulse{
     0%{transform:scale(1);}
@@ -829,6 +851,12 @@ text-align:center;color:var(--muted);font-size:0.92rem;
     top:-100px;
     right:-100px;
   }
+  section{
+    padding:clamp(40px, 6vw, 60px) 0 !important;
+  }
+  .investor-box:last-child{
+    margin-bottom:0;
+  }
 }
 
 /* Très petits écrans (jusqu'à 400px) */
@@ -840,12 +868,12 @@ text-align:center;color:var(--muted);font-size:0.92rem;
     font-size:1.2rem;
   }
   .nav-badge{
-    font-size:0.65rem;
-    padding:4px 10px;
+    font-size:0.6rem;
+    padding:4px 8px;
   }
   .nav-cta{
-    font-size:0.7rem;
-    padding:6px 12px;
+    padding:4px 8px !important;
+    font-size:0.6rem !important;
   }
   h1{
     font-size:clamp(1.5rem, 7vw, 2rem);
@@ -918,16 +946,25 @@ text-align:center;color:var(--muted);font-size:0.92rem;
     font-size:14px !important;
   }
   .mobile-cta a{
-    padding:14px;
-    font-size:0.9rem;
+    padding:10px !important;
+    font-size:0.8rem !important;
   }
   .urgency-badge{
-    font-size:0.75rem;
-    padding:6px 12px;
-  }
-  .trust-item{
     font-size:0.7rem;
     padding:4px 10px;
+  }
+  .trust-item{
+    font-size:0.65rem;
+    padding:4px 8px;
+  }
+  .metric{
+    padding:12px 0 !important;
+  }
+  .investor-box{
+    margin-bottom:12px;
+  }
+  .investor-box:last-child{
+    margin-bottom:0;
   }
 }
 </style>
